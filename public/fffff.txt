@@ -1,0 +1,29 @@
+
+  <div class="row mt-5 justify-content-center g-4 mb-5" style="height: 400px;">
+    <div class="col-md-6 col-12">
+    <div class="card" style="width: 18rem;">
+      <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/Lo1GD5u1gMHZknoo1N" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+      
+      <div class="card-body">
+        <h5 class="card-title text-center">Valid Ip Adress Checker</h5>
+        <p class="card-text text-center">check valid Ip Adress by clicking the button below👇</p>
+        <a href="#" class="btn btn-primary d-block mx-auto">Check Adress</a>
+      </div>
+    </div>
+  </div>
+
+
+<!-- card-4 -->
+    <div class="col-md-6 col-12">
+    <div class="card" style="width: 18rem;">
+      <div style="width:100%;height:0;padding-bottom:100%;position:relative;"><iframe src="https://giphy.com/embed/D0WOL0ogZIoG4" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+      
+      <div class="card-body">
+        <h5 class="card-title text-center">Merge Docs</h5>
+        <p class="card-text text-center">Merge Docs  by clicking the button below👇</p>
+        <a href="#" class="btn btn-primary d-block mx-auto">Merge</a>
+      </div>
+    </div>
+
+  </div>
+</div>
