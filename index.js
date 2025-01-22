@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
+import dotenv from 'dotenv'
 // import axios from "axios";
 import CloudmersiveValidateApiClient from 'cloudmersive-validate-api-client';
 
@@ -13,7 +14,7 @@ import { dirname } from 'path';
 import { buffer } from "stream/consumers";
 import CloudmersiveVirusApiClient from 'cloudmersive-virus-api-client';
 
-
+dotenv.config();
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -23,11 +24,11 @@ const app = express();
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('public'))
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 
 const URL = 'https://api.cloudmersive.com'
-const API_KEY = '81f54c70-dda0-45be-846c-dc2f21749943'
+const API_KEY = process.env.CLOUDMERSIVE_API_KEY;
 
 var virusClient = CloudmersiveVirusApiClient.ApiClient.instance;
 
@@ -36,10 +37,10 @@ var defaultClient = CloudmersiveValidateApiClient.ApiClient.instance;
 var defaultClientMerge = CloudmersiveConvertApiClient.ApiClient.instance;
 
 var validateApikey = defaultClient.authentications['Apikey'];
-validateApikey.apiKey = '81f54c70-dda0-45be-846c-dc2f21749943';
+validateApikey.apiKey = API_KEY;
 
 var virusClientKey = virusClient.authentications['Apikey'];
-virusClientKey.apiKey = '81f54c70-dda0-45be-846c-dc2f21749943';
+virusClientKey.apiKey = API_KEY;
 
 // var convertApikey = defaultClientMerge.authentications['Apikey'];
 // convertApikey.apiKey = '81f54c70-dda0-45be-846c-dc2f21749943';
